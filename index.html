@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Codedamn - Quiz Project</title>
+</head>
+
+<body>
+    <header class="py-3.5 px-5">
+        <div class="container flex justify-between h-fit mx-auto">
+            <a id="leaderboard" class="cursor-pointer">View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+            </i></a> 
+
+            <span>Time: <span id="time-left" class="w-5 inline-block"></span></span>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container mx-auto flex items-center justify-center">
+            <div class="card rounded-3xl py-8 p-5 sm:py-12 sm:p-10">
+                <!-- Intro Messsage -->
+                <div class="intro">
+                    <header class="font-black">Coding Quiz Challenge</header>
+                    <p class="my-4">Try to answer the following code-related questions within the time limit.</p>
+                    <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                    <button class="start-quiz text-white cursor-pointer px-4 py-2.5 rounded-lg text-sm mt-4">Start Quiz</button>
+                </div>
+                <!-- Quiz -->
+                <div class="quiz hidden">
+                    <header class="question font-bold mb-3">You know you're not supposed to peep right ?</header>
+                    <div class="options">
+                        <div class="option">1.Yes I do</div>
+                        <div class="option">2. No I don't</div>
+                        <div class="option">3. Meh</div>
+                        <div class="option">4. Who's watching ?</div>
+                    </div>
+                    <div class="pass hidden">
+                        <hr>
+                        <div class="correct-state my-3 ">Correct!</div>
+                    </div>
+                </div>
+                <!-- All Done -->
+                <div class="completed hidden">
+                    <header class="mb-3 font-bold">All done!</header>
+                    <p>Your final score is <span class="score">0</span>.</p>
+                    <form class="initials-form flex flex-wrap gap-2 items-center mt-4">
+                       <label>Enter your initials:</label>
+                     <input type="text" name="initials" id="initials" required class="h-8 rounded px-2">
+                     <button type="submit" class="text-white cursor-pointer px-4 py-2.5 rounded-lg text-sm">Submit</button>
+                    </form>
+                </div>
+                <!-- HighScore -->
+                <div class="highscores-container hidden">
+                    <header class="font-bold">Highscores</header>
+                    <ol class="highscores mt-5 ml-10">
+                    </ol>
+                    <div class="mt-4">
+                        <button class="back text-white cursor-pointer px-4 py-2.5 rounded-lg text-sm my-1">Go Back</button>
+                        <button class="clear-highscores text-white cursor-pointer px-4 py-2.5 rounded-lg text-sm my-1">Clear HighScores</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

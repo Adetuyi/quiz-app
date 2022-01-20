@@ -1,0 +1,54 @@
+body{
+    font-family: 'Verdana', sans-serif;
+    min-width: 300px;
+}
+body > header{
+    background-color: #218380;
+    color: #fff;
+}
+header .container {
+    max-width: 1200px;
+}
+main .container{
+    min-height: 90vh;
+}
+.card{
+    border: 2.5px solid #D4D4D4;
+    box-shadow: 10px 5px 4px #D4D4D4;
+    max-width: 90vw;
+}
+.card header {    
+    font-size: 24px;
+}
+.card button{
+    background-color: #218380;    
+}
+.card ol{
+    list-style-type: decimal;
+    text-transform: capitalize;
+}
+.option{
+    background-color: #218380;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: .4rem;
+}
+.completed{
+    width: 400px;
+    max-width: 100%;
+}
+form input{
+    width: 80px;
+    border: 1px solid #d4d4d4;
+}
+form input:focus{
+    outline: 1.5px solid #0009;
+}
+
+@media (max-width: 500px){
+    .card header {    
+        font-size: 20px;
+    }
+}
